@@ -1,0 +1,29 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+int main()
+{
+int gdriver=DETECT, gmode,errorcode;
+int xmax,ymax,x1,y1,x2,y2,tx,ty;
+initgraph(&gdriver, &gmode, "C:\\TURBOC3\\BGI");
+
+printf("enter the x1 coordinator : \n");
+scanf("%d",&x1);
+printf("enter the y1 coordinator : \n");
+scanf("%d",&y1);
+printf("enter the x2 coordinator : \n");
+scanf("%d",&x2);
+printf("enter the y2 coordinator : \n");
+scanf("%d",&y2);
+line(x1,y1,x2,y2);
+printf("enter the translation Point");
+printf("tx : ");
+scanf("%d",&tx);
+printf("ty : ");
+scanf("%d",&ty);
+line(x1+tx,y1+ty,x2+ty,y2+ty);
+getch();
+closegraph();
+return 0;
+}
